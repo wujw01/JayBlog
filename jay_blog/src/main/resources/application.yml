@@ -1,0 +1,33 @@
+#启动端口号
+server:
+  port: 8086
+# DataSource Config
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/jay_blog??allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: admin
+  redis:
+    sentinel:
+      master: mymaster
+      nodes: 47.106.38.101:26379,47.106.38.101:26380
+#mybatis-plus的配置
+# 此处有坑 单模块加载也需要配置*(classpath 紧挨着的星) 解决自定义SQL无法执行
+mybatis-plus:
+  mapper-locations: classpath*:mybatis/mapper/*Mapper.xml
+
+#redis的配置
+  #  日志配置
+project: jay_blog
+pattern: "%d{yyyy-MM-dd HH:mm:ss.SSS} |-%-5level [%thread] %c{25} [%L] -| %msg%n"
+path: jay\log
+logging:
+  path: ${path}
+  pattern:
+    console: ${pattern}
+    file: ${pattern}
+  file: ${path}\${project}-app.log
+
+
+

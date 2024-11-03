@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jay.modules.authc.dao.MtoUsersMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.jay.modules.authc.entity.MtoUsers">
+    <result column="id" property="id" />
+        <result column="created" property="created" />
+        <result column="email" property="email" />
+        <result column="last_login" property="lastLogin" />
+        <result column="mobile" property="mobile" />
+        <result column="password" property="password" />
+        <result column="status" property="status" />
+        <result column="username" property="username" />
+        <result column="name" property="name" />
+        <result column="avatar" property="avatar" />
+        <result column="updated" property="updated" />
+        <result column="gender" property="gender" />
+        <result column="role_id" property="roleId" />
+        <result column="source" property="source" />
+        <result column="active_email" property="activeEmail" />
+        <result column="comments" property="comments" />
+        <result column="fans" property="fans" />
+        <result column="favors" property="favors" />
+        <result column="follows" property="follows" />
+        <result column="posts" property="posts" />
+        <result column="signature" property="signature" />
+    </resultMap>
+
+</mapper>
